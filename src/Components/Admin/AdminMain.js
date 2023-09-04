@@ -1,6 +1,7 @@
 import React from 'react';
-import Header from './ReuseComponents/Header';
-import '../Styles/Admin.css';
+import Header from '../ReuseComponents/Header.js';
+import '../../Styles/Admin.css';
+import ListAdmin from './ListAdmin.js';
 import { Routes } from 'react-router-dom';
 import { Link, Route } from 'react-router-dom'; 
 
@@ -24,10 +25,12 @@ function AdminMain() {
             <input className='admin_input'  type="password" placeholder="xxxx" />
           </div>
           <div className='bottons'>
-          <button  className="admin-button">Ingresar</button>
+          <Link to="/listadmin"> <button  className="admin-button">Ingresar</button></Link>
+          
           <Link to="/"> <button className="admin-button">Regresar</button></Link>
           <Routes>
           <Route path="/" element={ <login /> } />
+          <Route path="/listadmin" element={ <ListAdmin /> } />
           </Routes>
            
           

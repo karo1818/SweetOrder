@@ -1,5 +1,6 @@
 
 .admin-container {
+  margin-top: 6vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,9 +10,9 @@
 }
 
 .admin-content {
-  margin-top: 6vh;  
+  
   background-color: #fff; /* Fondo blanco para el contenido */
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra para el cuadro */
   text-align: center;

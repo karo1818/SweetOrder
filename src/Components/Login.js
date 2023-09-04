@@ -1,8 +1,8 @@
 import React from 'react';
 import "../Styles/Login.css"
 import Logo from '../Images/Logo.png';
-import ClienteMain from './ClientMain.js';
-import AdminMain from './AdminMain.js';
+import ClienteMain from './Client/ClientMain.js';
+import AdminMain from './Admin/AdminMain.js';
 import { Routes } from 'react-router-dom';
 import { Link, Route } from 'react-router-dom'; 
 function Login() {
