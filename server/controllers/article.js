@@ -1,10 +1,10 @@
-import PostArticle from "../models/postArticle.js";
+import Article from "../models/Article.js";
 
 export const getArticles = async (req, res) => {
     try{
-        const postArticles = await PostArticle.find();
-        console.log(postArticles);
-        res.status(200).json(postArticles);
+        const articles = await Article.find();
+        console.log(articles);
+        res.status(200).json(articles);
     } catch (error) {
         res.status(404).json({ message: error.message });
     }
@@ -12,11 +12,11 @@ export const getArticles = async (req, res) => {
 }
 
 export const createArticle = async (req, res) => {
-    const post = req.body;
-    const newPost = new PostArticle(post);
+    const article = req.body;
+    const newArticle = new Article(article);
     try{
-        await newPost.save();
-        res.status(201).js(newPost);
+        await newArticle.save();
+        res.status(201).js(newArticle);
     } catch (error) {
         res.status(409).json({ message: error.message });
     }
