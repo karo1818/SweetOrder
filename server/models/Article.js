@@ -9,5 +9,5 @@ const articleSchema = mongoose.Schema({
     price: Number
 });
 
-var Article = mongoose.model('Article', articleSchema);
+const Article = mongoose.model('Article', articleSchema);
 export default Article;

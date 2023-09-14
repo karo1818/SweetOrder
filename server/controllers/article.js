@@ -4,8 +4,8 @@ import Article from "../models/article.js";
 export const getArticles = async (req, res) => {
     try{
         const articles = await Article.find();
-        console.log(articles);
         res.status(200).json(articles);
+        console.log(articles);
     } catch (error) {
         res.status(404).json({ message: error.message });
     }
