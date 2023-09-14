@@ -1,12 +1,13 @@
 import mongoose from 'mongoose';
 
 const articleSchema = mongoose.Schema({
-    barcode: String,
-    name: String,
+    _id: mongoose.Schema.Types.ObjectId,
     available: Boolean,
-    price: Number,
-    category: String
+    barcode: String,
+    category: String,
+    name: String,
+    price: Number
 });
 
-const Article = mongoose.model('Article', articleSchema);
+var Article = mongoose.model('Article', articleSchema);
 export default Article;
